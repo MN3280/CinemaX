@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "CustomerId": 1,
+    "MovieId": 1,
+    "seat_number": "A12",
+    "price": 45000,
+    "date": "2023-12-01T19:00:00Z"
+  },
+  {
+    "id": 2,
+    "CustomerId": 2,
+    "MovieId": 2,
+    "seat_number": "B7",
+    "price": 80000,
+    "date": "2023-12-02T20:30:00Z"
+  },
+  {
+    "id": 3,
+    "CustomerId": 3,
+    "MovieId": 3,
+    "seat_number": "C7",
+    "price": 100000,
+    "date": "2023-12-02T20:30:00Z"
+  },
+  {
+    "id": 4,
+    "CustomerId": 4,
+    "MovieId": 4,
+    "seat_number": "D12",
+    "price": 125000,
+    "date": "2023-12-02T20:30:00Z"
+  },
+  {
+    "id": 5,
+    "CustomerId": 5,
+    "MovieId": 5,
+    "seat_number": "E10",
+    "price": 85000,
+    "date": "2023-12-02T20:30:00Z"
+  }
+]
