@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Inception",
+    "genre": "Science Fiction",
+    "rating": 8.8
+  },
+  {
+    "id": 2,
+    "title": "The Shawshank Redemption",
+    "genre": "Drama",
+    "rating": 9.3
+  },
+  {
+    "id": 3,
+    "title": "Tangled",
+    "genre": "Romance",
+    "rating": 8
+  },
+  {
+    "id": 4,
+    "title": "Enola Holmes",
+    "genre": "Mystery",
+    "rating": 8.5
+  },
+  {
+    "id": 5,
+    "title": "Kungfu Panda",
+    "genre": "Family",
+    "rating": 9.0
+  }
+]
