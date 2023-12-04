@@ -4,7 +4,6 @@ const custController = require('../controllers/custController')
 const { authentication } = require('../middlewares/authentication')
 
 
-
 router.get('/', custController.readCust)
 router.get('/ticket',authentication, custController.readTicket)
 router.post('/register', custController.registerCust)
