@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Ticket extends Model {
     /**
@@ -11,50 +9,53 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Ticket.belongsTo(models.Customer, {foreignKey: "customerId"})
-      Ticket.belongsTo(models.Movie, {foreignKey: "movieId"})
+      Ticket.belongsTo(models.Customer, { foreignKey: "CustomerId" });
+      Ticket.belongsTo(models.Movie, { foreignKey: "MovieId" });
     }
   }
-  Ticket.init({
-    price: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        notNull: {
-          msg: "Price cannot be blank!",
-        },
-        notEmpty: {
-          msg: "Price cannot be blank!",
+  Ticket.init(
+    {
+      price: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+          notNull: {
+            msg: "Price cannot be blank!",
+          },
+          notEmpty: {
+            msg: "Price cannot be blank!",
+          },
         },
       },
+      seat_number: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          notNull: {
+            msg: "Please select the seat number!",
+          },
+          notEmpty: {
+            msg: "Please select the seat number!",
+          },
+        },
+      },
+      date: {
+        type: DataTypes.DATEONLY,
+        allowNull: false,
+      },
+      CustomerId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      MovieId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
     },
-    seat_number:{
-     type: DataTypes.STRING,
-     allowNull: false,
-     validate: {
-       notNull: {
-         msg: "Please select the seat number!",
-       },
-       notEmpty: {
-         msg: "Please select the seat number!",
-       },
-     },
-    }, 
-    date:{
-      type: DataTypes.DATE,
-      allowNull: false,
-    }, 
-    customerId:{
-     type: DataTypes.INTEGER,
-     allowNull: false,
-    },
-    movieId:{
-     type: DataTypes.INTEGER,
-     allowNull: false,
+    {
+      sequelize,
+      modelName: "Ticket",
     }
-  }, {
-    sequelize,
-    modelName: 'Ticket',
-  });
+  );
   return Ticket;
 };

@@ -3,7 +3,7 @@ const router = express.Router()
 const movieController = require('../controllers/movieController')
 
 
-router.get('/', movieController.readMovie)
-router.get('/:id', movieController.getOneMovie)
+router.get('/', movieController.getMovie)
+router.get('/:id', movieController.detailMovie)
 
 module.exports = router

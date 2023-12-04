@@ -7,7 +7,6 @@ module.exports = {
     ticket.forEach((el) => {
       el.createdAt = new Date();
       el.updatedAt = new Date();
-      el.date = new Date();
     });
     await queryInterface.bulkInsert("Tickets", ticket, {});
   },
